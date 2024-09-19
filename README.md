@@ -114,3 +114,11 @@ Com sua memória flash ESP32 apagada, você pode finalmente atualizar o firmware
 Sucesso!
 
 Agora é só fazer a instalação do vscode, node, Pymark e usufluir do bom e do melhor desse mundo.
+
+
+
+#### Fontes
+
+[aranacorp](https://www.aranacorp.com/pt/programar-um-esp32-esp8266-com-micropython-e-vs-code/ )
+
+[Random Nerd Tutorials](randomnerdtutorials.com)
