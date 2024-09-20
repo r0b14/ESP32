@@ -26,6 +26,35 @@ Há um dht módulo que vem com o firmware MicroPython por padrão. Portanto, é 
 
 1. Comece importando o dht e machine Módulos
 
+```
 import dht
 from machine import Pin
+```
 
+``` python
+from machine import Pin
+from time import sleep
+import dht 
+
+sensor = dht.DHT22(Pin(14))
+#sensor = dht.DHT11(Pin(14))
+
+while True:
+  try:
+    sleep(2)
+    sensor.measure()
+    temp = sensor.temperature()
+    hum = sensor.humidity()
+    temp_f = temp * (9/5) + 32.0
+    print('Temperature: %3.1f C' %temp)
+    print('Temperature: %3.1f F' %temp_f)
+    print('Humidity: %3.1f %%' %hum)
+  except OSError as e:
+    print('Failed to read sensor.')
+```
+
+
+
+#### Fontes
+
+[Random nerd tutorials](https://randomnerdtutorials.com/esp32-esp8266-dht11-dht22-micropython-temperature-humidity-sensor/)
